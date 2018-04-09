@@ -1,0 +1,355 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LogisticaTransporteModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Agentes_Aduanales">
+    <Key>
+      <PropertyRef Name="ID_AA" />
+    </Key>
+    <Property Name="ID_AA" Type="Int32" Nullable="false" />
+    <Property Name="Nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Rel_AA" Relationship="Self.fk_AA" FromRole="Agentes_Aduanales" ToRole="Rel_AA" />
+  </EntityType>
+  <EntityType Name="CodigoPostal">
+    <Key>
+      <PropertyRef Name="CP" />
+    </Key>
+    <Property Name="CP" Type="Int32" Nullable="false" />
+    <Property Name="Col" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DelMun" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Ciudad" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="EntidadFederativa" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Pais" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Contribuyentes">
+    <Key>
+      <PropertyRef Name="ID_Contribuyente" />
+    </Key>
+    <Property Name="ID_Contribuyente" Type="Int32" Nullable="false" />
+    <Property Name="Tipo" Type="Int32" />
+    <Property Name="Nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="RFC" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+    <Property Name="Telefono" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Correo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="IMG_Empresa" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="No_Empleados" Type="Int32" />
+    <Property Name="Fecha_Alta" Type="DateTime" Precision="0" />
+    <Property Name="Fecha_Baja" Type="DateTime" Precision="0" />
+    <Property Name="Activo" Type="Boolean" />
+    <NavigationProperty Name="Rel_AA" Relationship="Self.fk_Cont_AA" FromRole="Contribuyentes" ToRole="Rel_AA" />
+    <NavigationProperty Name="Pedimento" Relationship="Self.fk_Rel_Ped_Cont" FromRole="Contribuyentes" ToRole="Pedimento" />
+    <NavigationProperty Name="Empleados" Relationship="Self.fk_TipoEmpleado" FromRole="Contribuyentes" ToRole="Empleados" />
+  </EntityType>
+  <EntityType Name="Direcciones">
+    <Key>
+      <PropertyRef Name="ID_Direccion" />
+    </Key>
+    <Property Name="ID_Direccion" Type="Int32" Nullable="false" />
+    <Property Name="ID_Contribuyente" Type="Int32" />
+    <Property Name="Calle" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Manzana" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Lote" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="No_Ext" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="No_Int" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CP" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Empleados">
+    <Key>
+      <PropertyRef Name="ID_Empleado" />
+    </Key>
+    <Property Name="ID_Empleado" Type="Int32" Nullable="false" />
+    <Property Name="Nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Ap_Pat" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Ap_Mat" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="RFC" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="NSS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ContratoTXT" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ContratoIMG" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Sueldo" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Bonos" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Tipo_Emp" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="Fecha_Alta" Type="DateTime" Precision="0" />
+    <Property Name="Fecha_Baja" Type="DateTime" Precision="0" />
+    <Property Name="Activo" Type="Boolean" />
+    <NavigationProperty Name="Contribuyentes" Relationship="Self.fk_TipoEmpleado" FromRole="Empleados" ToRole="Contribuyentes" />
+    <NavigationProperty Name="Rel_Pedimento_Empleado" Relationship="Self.fk_Rel_Ped_Emp" FromRole="Empleados" ToRole="Rel_Pedimento_Empleado" />
+  </EntityType>
+  <EntityType Name="Equipo_Transporte">
+    <Key>
+      <PropertyRef Name="ID_ET" />
+    </Key>
+    <Property Name="ID_ET" Type="Int32" Nullable="false" />
+    <Property Name="Nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Largo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Ancho" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Alto" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Activo" Type="Boolean" />
+    <NavigationProperty Name="Pedimento" Relationship="Self.fk_Rel_Ped_ET" FromRole="Equipo_Transporte" ToRole="Pedimento" />
+  </EntityType>
+  <EntityType Name="Modulos">
+    <Key>
+      <PropertyRef Name="ID_Modulo" />
+    </Key>
+    <Property Name="ID_Modulo" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Descripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Pedimento">
+    <Key>
+      <PropertyRef Name="ID_Pedimento" />
+    </Key>
+    <Property Name="ID_Pedimento" Type="Int32" Nullable="false" />
+    <Property Name="ID_Contribuyente" Type="Int32" />
+    <Property Name="ID_ET" Type="Int32" />
+    <Property Name="ID_Servicio" Type="Int32" />
+    <Property Name="Origen" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Destino" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="KM" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="Total" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="HoraSalida" Type="Time" Precision="7" />
+    <Property Name="HoraRegreso" Type="Time" Precision="7" />
+    <Property Name="FechaSalida" Type="DateTime" Precision="0" />
+    <Property Name="FechaRegreso" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Contribuyentes" Relationship="Self.fk_Rel_Ped_Cont" FromRole="Pedimento" ToRole="Contribuyentes" />
+    <NavigationProperty Name="Equipo_Transporte" Relationship="Self.fk_Rel_Ped_ET" FromRole="Pedimento" ToRole="Equipo_Transporte" />
+    <NavigationProperty Name="Servicios" Relationship="Self.fk_Rel_Ped_Serv" FromRole="Pedimento" ToRole="Servicios" />
+  </EntityType>
+  <EntityType Name="Rel_AA">
+    <Key>
+      <PropertyRef Name="ID_Rel_AA" />
+    </Key>
+    <Property Name="ID_Rel_AA" Type="Int32" Nullable="false" />
+    <Property Name="ID_AA" Type="Int32" />
+    <Property Name="ID_Contribuyente" Type="Int32" />
+    <Property Name="CuotaCorto" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CuotaMediano" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CuotaLargo" Type="Decimal" Precision="18" Scale="2" />
+    <NavigationProperty Name="Agentes_Aduanales" Relationship="Self.fk_AA" FromRole="Rel_AA" ToRole="Agentes_Aduanales" />
+    <NavigationProperty Name="Contribuyentes" Relationship="Self.fk_Cont_AA" FromRole="Rel_AA" ToRole="Contribuyentes" />
+  </EntityType>
+  <EntityType Name="Rel_Pedimento_Empleado">
+    <Key>
+      <PropertyRef Name="ID_Rel_Pedimento" />
+    </Key>
+    <Property Name="ID_Rel_Pedimento" Type="Int32" Nullable="false" />
+    <Property Name="ID_Pedimento" Type="Int32" />
+    <Property Name="ID_Empleado" Type="Int32" />
+    <NavigationProperty Name="Empleados" Relationship="Self.fk_Rel_Ped_Emp" FromRole="Rel_Pedimento_Empleado" ToRole="Empleados" />
+  </EntityType>
+  <EntityType Name="Rel_TipoUsuario_Modulos">
+    <Key>
+      <PropertyRef Name="ID_Rel_TU_M" />
+    </Key>
+    <Property Name="ID_Rel_TU_M" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ID_TipoUsuario" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="ID_Modulo" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Tipo_Usuario" Relationship="Self.fk_TipoUsu_Modulo" FromRole="Rel_TipoUsuario_Modulos" ToRole="Tipo_Usuario" />
+  </EntityType>
+  <EntityType Name="Rel_TipoUsuario_Submodulos">
+    <Key>
+      <PropertyRef Name="ID_Rel_TU_SM" />
+    </Key>
+    <Property Name="ID_Rel_TU_SM" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ID_TipoUsuario" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="ID_Submodulo" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Tipo_Usuario" Relationship="Self.fk_TipoUsu_Submodulo" FromRole="Rel_TipoUsuario_Submodulos" ToRole="Tipo_Usuario" />
+  </EntityType>
+  <EntityType Name="Servicios">
+    <Key>
+      <PropertyRef Name="ID_Servicio" />
+    </Key>
+    <Property Name="ID_Servicio" Type="Int32" Nullable="false" />
+    <Property Name="Servicio" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Costo" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Descripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Pedimento" Relationship="Self.fk_Rel_Ped_Serv" FromRole="Servicios" ToRole="Pedimento" />
+  </EntityType>
+  <EntityType Name="Submodulos">
+    <Key>
+      <PropertyRef Name="ID_Submodulo" />
+    </Key>
+    <Property Name="ID_Submodulo" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Descripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Tipo_Usuario">
+    <Key>
+      <PropertyRef Name="ID_TipoUsuario" />
+    </Key>
+    <Property Name="ID_TipoUsuario" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Descripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Rel_TipoUsuario_Modulos" Relationship="Self.fk_TipoUsu_Modulo" FromRole="Tipo_Usuario" ToRole="Rel_TipoUsuario_Modulos" />
+    <NavigationProperty Name="Rel_TipoUsuario_Submodulos" Relationship="Self.fk_TipoUsu_Submodulo" FromRole="Tipo_Usuario" ToRole="Rel_TipoUsuario_Submodulos" />
+  </EntityType>
+  <EntityType Name="Usuarios">
+    <Key>
+      <PropertyRef Name="ID_Usuario" />
+    </Key>
+    <Property Name="ID_Usuario" Type="Int32" Nullable="false" />
+    <Property Name="ID_TipoUsuario" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="Nombre" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Pass" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ID_Empresa" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Fecha_Alta" Type="DateTime" Precision="0" />
+    <Property Name="Fecha_Baja" Type="DateTime" Precision="0" />
+    <Property Name="Activo" Type="Boolean" />
+  </EntityType>
+  <Association Name="fk_AA">
+    <End Role="Agentes_Aduanales" Type="Self.Agentes_Aduanales" Multiplicity="0..1" />
+    <End Role="Rel_AA" Type="Self.Rel_AA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Agentes_Aduanales">
+        <PropertyRef Name="ID_AA" />
+      </Principal>
+      <Dependent Role="Rel_AA">
+        <PropertyRef Name="ID_AA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Cont_AA">
+    <End Role="Contribuyentes" Type="Self.Contribuyentes" Multiplicity="0..1" />
+    <End Role="Rel_AA" Type="Self.Rel_AA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contribuyentes">
+        <PropertyRef Name="ID_Contribuyente" />
+      </Principal>
+      <Dependent Role="Rel_AA">
+        <PropertyRef Name="ID_Contribuyente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Rel_Ped_Cont">
+    <End Role="Contribuyentes" Type="Self.Contribuyentes" Multiplicity="0..1" />
+    <End Role="Pedimento" Type="Self.Pedimento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contribuyentes">
+        <PropertyRef Name="ID_Contribuyente" />
+      </Principal>
+      <Dependent Role="Pedimento">
+        <PropertyRef Name="ID_Contribuyente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_TipoEmpleado">
+    <End Role="Contribuyentes" Type="Self.Contribuyentes" Multiplicity="1" />
+    <End Role="Empleados" Type="Self.Empleados" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Contribuyentes">
+        <PropertyRef Name="ID_Contribuyente" />
+      </Principal>
+      <Dependent Role="Empleados">
+        <PropertyRef Name="ID_Empleado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Rel_Ped_Emp">
+    <End Role="Empleados" Type="Self.Empleados" Multiplicity="0..1" />
+    <End Role="Rel_Pedimento_Empleado" Type="Self.Rel_Pedimento_Empleado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empleados">
+        <PropertyRef Name="ID_Empleado" />
+      </Principal>
+      <Dependent Role="Rel_Pedimento_Empleado">
+        <PropertyRef Name="ID_Empleado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Rel_Ped_ET">
+    <End Role="Equipo_Transporte" Type="Self.Equipo_Transporte" Multiplicity="0..1" />
+    <End Role="Pedimento" Type="Self.Pedimento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Equipo_Transporte">
+        <PropertyRef Name="ID_ET" />
+      </Principal>
+      <Dependent Role="Pedimento">
+        <PropertyRef Name="ID_ET" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Rel_Ped_Serv">
+    <End Role="Servicios" Type="Self.Servicios" Multiplicity="0..1" />
+    <End Role="Pedimento" Type="Self.Pedimento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Servicios">
+        <PropertyRef Name="ID_Servicio" />
+      </Principal>
+      <Dependent Role="Pedimento">
+        <PropertyRef Name="ID_Servicio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_TipoUsu_Modulo">
+    <End Role="Tipo_Usuario" Type="Self.Tipo_Usuario" Multiplicity="0..1" />
+    <End Role="Rel_TipoUsuario_Modulos" Type="Self.Rel_TipoUsuario_Modulos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tipo_Usuario">
+        <PropertyRef Name="ID_TipoUsuario" />
+      </Principal>
+      <Dependent Role="Rel_TipoUsuario_Modulos">
+        <PropertyRef Name="ID_TipoUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_TipoUsu_Submodulo">
+    <End Role="Tipo_Usuario" Type="Self.Tipo_Usuario" Multiplicity="0..1" />
+    <End Role="Rel_TipoUsuario_Submodulos" Type="Self.Rel_TipoUsuario_Submodulos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tipo_Usuario">
+        <PropertyRef Name="ID_TipoUsuario" />
+      </Principal>
+      <Dependent Role="Rel_TipoUsuario_Submodulos">
+        <PropertyRef Name="ID_TipoUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="BD_LogisticaTransporteEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Agentes_Aduanales" EntityType="Self.Agentes_Aduanales" />
+    <EntitySet Name="CodigoPostal" EntityType="Self.CodigoPostal" />
+    <EntitySet Name="Contribuyentes" EntityType="Self.Contribuyentes" />
+    <EntitySet Name="Direcciones" EntityType="Self.Direcciones" />
+    <EntitySet Name="Empleados" EntityType="Self.Empleados" />
+    <EntitySet Name="Equipo_Transporte" EntityType="Self.Equipo_Transporte" />
+    <EntitySet Name="Modulos" EntityType="Self.Modulos" />
+    <EntitySet Name="Pedimento" EntityType="Self.Pedimento" />
+    <EntitySet Name="Rel_AA" EntityType="Self.Rel_AA" />
+    <EntitySet Name="Rel_Pedimento_Empleado" EntityType="Self.Rel_Pedimento_Empleado" />
+    <EntitySet Name="Rel_TipoUsuario_Modulos" EntityType="Self.Rel_TipoUsuario_Modulos" />
+    <EntitySet Name="Rel_TipoUsuario_Submodulos" EntityType="Self.Rel_TipoUsuario_Submodulos" />
+    <EntitySet Name="Servicios" EntityType="Self.Servicios" />
+    <EntitySet Name="Submodulos" EntityType="Self.Submodulos" />
+    <EntitySet Name="Tipo_Usuario" EntityType="Self.Tipo_Usuario" />
+    <EntitySet Name="Usuarios" EntityType="Self.Usuarios" />
+    <AssociationSet Name="fk_AA" Association="Self.fk_AA">
+      <End Role="Agentes_Aduanales" EntitySet="Agentes_Aduanales" />
+      <End Role="Rel_AA" EntitySet="Rel_AA" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Cont_AA" Association="Self.fk_Cont_AA">
+      <End Role="Contribuyentes" EntitySet="Contribuyentes" />
+      <End Role="Rel_AA" EntitySet="Rel_AA" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Rel_Ped_Cont" Association="Self.fk_Rel_Ped_Cont">
+      <End Role="Contribuyentes" EntitySet="Contribuyentes" />
+      <End Role="Pedimento" EntitySet="Pedimento" />
+    </AssociationSet>
+    <AssociationSet Name="fk_TipoEmpleado" Association="Self.fk_TipoEmpleado">
+      <End Role="Contribuyentes" EntitySet="Contribuyentes" />
+      <End Role="Empleados" EntitySet="Empleados" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Rel_Ped_Emp" Association="Self.fk_Rel_Ped_Emp">
+      <End Role="Empleados" EntitySet="Empleados" />
+      <End Role="Rel_Pedimento_Empleado" EntitySet="Rel_Pedimento_Empleado" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Rel_Ped_ET" Association="Self.fk_Rel_Ped_ET">
+      <End Role="Equipo_Transporte" EntitySet="Equipo_Transporte" />
+      <End Role="Pedimento" EntitySet="Pedimento" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Rel_Ped_Serv" Association="Self.fk_Rel_Ped_Serv">
+      <End Role="Servicios" EntitySet="Servicios" />
+      <End Role="Pedimento" EntitySet="Pedimento" />
+    </AssociationSet>
+    <AssociationSet Name="fk_TipoUsu_Modulo" Association="Self.fk_TipoUsu_Modulo">
+      <End Role="Tipo_Usuario" EntitySet="Tipo_Usuario" />
+      <End Role="Rel_TipoUsuario_Modulos" EntitySet="Rel_TipoUsuario_Modulos" />
+    </AssociationSet>
+    <AssociationSet Name="fk_TipoUsu_Submodulo" Association="Self.fk_TipoUsu_Submodulo">
+      <End Role="Tipo_Usuario" EntitySet="Tipo_Usuario" />
+      <End Role="Rel_TipoUsuario_Submodulos" EntitySet="Rel_TipoUsuario_Submodulos" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

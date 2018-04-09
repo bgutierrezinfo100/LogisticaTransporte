@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f14ae1952dc9487aaca39991f6cf4682" Name="Diagram1">
+        <EntityTypeShape EntityType="LogisticaTransporteModel.Agentes_Aduanales" Width="1.5" PointX="3.75" PointY="14.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LogisticaTransporteModel.CodigoPostal" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LogisticaTransporteModel.Contribuyentes" Width="1.5" PointX="0.75" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LogisticaTransporteModel.Direcciones" Width="1.5" PointX="8.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LogisticaTransporteModel.Empleados" Width="1.5" PointX="3" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LogisticaTransporteModel.Equipo_Transporte" Width="1.5" PointX="3.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="LogisticaTransporteModel.Modulos" Width="1.5" PointX="0.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LogisticaTransporteModel.Pedimento" Width="1.5" PointX="6" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LogisticaTransporteModel.Rel_AA" Width="1.5" PointX="6" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="LogisticaTransporteModel.Rel_Pedimento_Empleado" Width="1.5" PointX="5.25" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LogisticaTransporteModel.Rel_TipoUsuario_Modulos" Width="1.5" PointX="11" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="LogisticaTransporteModel.Rel_TipoUsuario_Submodulos" Width="1.5" PointX="11" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LogisticaTransporteModel.Servicios" Width="1.5" PointX="3.75" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="LogisticaTransporteModel.Submodulos" Width="1.5" PointX="10.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LogisticaTransporteModel.Tipo_Usuario" Width="1.5" PointX="8.75" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LogisticaTransporteModel.Usuarios" Width="1.5" PointX="8.75" PointY="10.75" IsExpanded="true" />
+        <AssociationConnector Association="LogisticaTransporteModel.fk_AA" ManuallyRouted="false" />
+        <AssociationConnector Association="LogisticaTransporteModel.fk_Cont_AA" ManuallyRouted="false" />
+        <AssociationConnector Association="LogisticaTransporteModel.fk_Rel_Ped_Cont" ManuallyRouted="false" />
+        <AssociationConnector Association="LogisticaTransporteModel.fk_TipoEmpleado" ManuallyRouted="false" />
+        <AssociationConnector Association="LogisticaTransporteModel.fk_Rel_Ped_Emp" ManuallyRouted="false" />
+        <AssociationConnector Association="LogisticaTransporteModel.fk_Rel_Ped_ET" ManuallyRouted="false" />
+        <AssociationConnector Association="LogisticaTransporteModel.fk_Rel_Ped_Serv" ManuallyRouted="false" />
+        <AssociationConnector Association="LogisticaTransporteModel.fk_TipoUsu_Modulo" ManuallyRouted="false" />
+        <AssociationConnector Association="LogisticaTransporteModel.fk_TipoUsu_Submodulo" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
