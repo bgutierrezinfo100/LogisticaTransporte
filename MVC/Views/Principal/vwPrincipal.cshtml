@@ -30,8 +30,22 @@
     
     <div ng-app="App" ng-controller="PrincipalJSController">
         
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">LOGO</a>
+
+        <nav class="navbar navbar-light bg-dark">            
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">
+                        <img src="~/Iconos/icons8-cliente-de-empresa-50.png" width="25" height="25"/>
+                    </span>
+                </div>
+                <input type="text" class="form-control" placeholder="Usuario" aria-label="Usuario" aria-describedby="basic-addon1">
+            </div>
+        </nav>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">            
+            <a class="navbar-brand" href="#">
+                <img src="~/Iconos/globe.png">
+            </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -49,31 +63,58 @@
                    
                 </ul>
                 <form class="form-inline my-1 my-lg-0">
-                    <input class="form-control mr-sm-1" type="search" placeholder="Buscar..." aria-label="Buscar">
-                    <button class="btn btn-outline-info my-1 my-sm-0" type="submit">Buscar</button>
+                    <input class="form-control mr-sm-1" type="search" placeholder="Usuario" aria-label="Usuario">
+                    <button class="btn btn-outline-info my-1 my-sm-0" type="submit">Iniciar Sesión</button>
                 </form>
             </div>
         </nav>
     </div>
 
     <div id="sidebar" class="bg-dark">
-        <div class="bg-dark">
+        <div>
             <ul class="nav flex-column">
                 <li class="nav-pills">
-                    <a class="nav-link active" href="#">Active</a>
+                    <a class="nav-link" href="#">
+                        <img src="~/Iconos/icons8-pedido-50.png" width="50" height="50" class="rounded mx-auto d-block"/>
+                    </a>
                 </li>
                 <li class="nav-pills">
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" href="#">
+                        <img src="~/Iconos/icons8-cliente-de-empresa-50.png" width="50" height="50" class="rounded mx-auto d-block"/>
+                    </a>
                 </li>
                 <li class="nav-pills">
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" href="#">
+                        <img src="~/Iconos/icons8-aduana-50.png" width="50" height="50" class="rounded mx-auto d-block"/>
+                    </a>
                 </li>
                 <li class="nav-pills">
-                    <a class="nav-link disabled" href="#">Disabled</a>
+                    <a class="nav-link disabled" href="#">
+                        <img src="~/Iconos/icons8-direccion-50.png" width="50" height="50" class="rounded mx-auto d-block"/>
+                    </a>
+                </li>
+                <li class="nav-pills">
+                    <a class="nav-link disabled" href="#">
+                        <img src="~/Iconos/icons8-servicios-64.png" width="50" height="50" class="rounded mx-auto d-block"/>
+                    </a>
+                </li>
+                <li class="nav-pills">
+                    <a class="nav-link disabled" href="#">
+                        <img src="~/Iconos/icons8-empleados-64.png" width="50" height="50" class="rounded mx-auto d-block"/>
+                    </a>
+                </li>
+                <li class="nav-pills">
+                    <a class="nav-link disabled" href="#">
+                        <img src="~/Iconos/icons8-servicios-80.png" width="50" height="50" class="rounded mx-auto d-block"/>
+                    </a>
                 </li>
             </ul>
         </div>
     </div>
+
+    
+
+
 
 </body>
 </html>
