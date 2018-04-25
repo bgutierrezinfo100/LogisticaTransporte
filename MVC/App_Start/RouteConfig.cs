@@ -16,7 +16,8 @@ namespace MVC
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Principal", action = "vwPrincipal", id = UrlParameter.Optional }
+                //defaults: new { controller = "Principal", action = "vwPrincipal", id = UrlParameter.Optional }
+                defaults: new { controller = "Principal", action = "PaginaPrincipal", id = UrlParameter.Optional }
             );
         }
     }

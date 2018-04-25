@@ -13,5 +13,10 @@ namespace MVC.Controllers
         {
             return View();
         }
+
+        public ActionResult PaginaPrincipal()
+        {
+            return View();
+        }
     }
 }

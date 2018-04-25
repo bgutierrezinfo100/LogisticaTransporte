@@ -13,6 +13,10 @@
     height:100%;
 }
 
+.renderSection {
+    margin-left:100px;
+}
+
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -4053,6 +4057,7 @@ tbody.collapse.show {
   background: no-repeat center center;
   background-size: 100% 100%;
 }
+
 
 @media (max-width: 575.98px) {
   .navbar-expand-sm > .container,

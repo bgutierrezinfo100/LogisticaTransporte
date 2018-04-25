@@ -1,1 +1,15 @@
 C:\Users\Desarrollo\Documents\Brandon\Proyecto\LogisticaTransporte\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\Desarrollo\Documents\GitHub\LogisticaTransporte\DAL\bin\Debug\DAL.dll.config
+C:\Users\Desarrollo\Documents\GitHub\LogisticaTransporte\DAL\bin\Debug\DAL.dll
+C:\Users\Desarrollo\Documents\GitHub\LogisticaTransporte\DAL\bin\Debug\DAL.pdb
+C:\Users\Desarrollo\Documents\GitHub\LogisticaTransporte\DAL\bin\Debug\Entidades.dll
+C:\Users\Desarrollo\Documents\GitHub\LogisticaTransporte\DAL\bin\Debug\EntityFramework.dll
+C:\Users\Desarrollo\Documents\GitHub\LogisticaTransporte\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Desarrollo\Documents\GitHub\LogisticaTransporte\DAL\bin\Debug\Modelo.dll
+C:\Users\Desarrollo\Documents\GitHub\LogisticaTransporte\DAL\bin\Debug\Entidades.pdb
+C:\Users\Desarrollo\Documents\GitHub\LogisticaTransporte\DAL\bin\Debug\Modelo.pdb
+C:\Users\Desarrollo\Documents\GitHub\LogisticaTransporte\DAL\bin\Debug\EntityFramework.xml
+C:\Users\Desarrollo\Documents\GitHub\LogisticaTransporte\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Desarrollo\Documents\GitHub\LogisticaTransporte\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\Desarrollo\Documents\GitHub\LogisticaTransporte\DAL\obj\Debug\DAL.dll
+C:\Users\Desarrollo\Documents\GitHub\LogisticaTransporte\DAL\obj\Debug\DAL.pdb

@@ -28,6 +28,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Iconos", "Iconos", "{07517F
 		Iconos\icons8-ubicacion-filled-50.png = Iconos\icons8-ubicacion-filled-50.png
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BAL", "BAL\BAL.csproj", "{0A0F1757-8A47-4FF3-B676-AA4579E2BCE5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -50,6 +52,10 @@ Global
 		{64C80B1A-8823-4EE9-9D76-2E2B3F5E3507}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64C80B1A-8823-4EE9-9D76-2E2B3F5E3507}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64C80B1A-8823-4EE9-9D76-2E2B3F5E3507}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A0F1757-8A47-4FF3-B676-AA4579E2BCE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A0F1757-8A47-4FF3-B676-AA4579E2BCE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A0F1757-8A47-4FF3-B676-AA4579E2BCE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A0F1757-8A47-4FF3-B676-AA4579E2BCE5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

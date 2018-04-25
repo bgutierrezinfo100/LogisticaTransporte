@@ -1,0 +1,166 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/toastr")
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/angularjs")
+
+    <script src="~/Scripts/angular.min.js"></script>
+    <script src="~/Scripts/angular-route.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-animate.js"></script>
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-theme.min.css" rel="stylesheet" />
+    <script src="~/Scripts/angular-ui/ui-bootstrap-tpls.min.js"></script>
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+
+    <link href="~/Content/toastr.css" rel="stylesheet" />
+
+    <script src="~/Controllers/PrincipalJSController.js"></script>
+    <script src="~/App.js"></script>
+
+    @RenderSection("scripts", required: false)
+</head>
+
+<body>
+
+    <div ng-app="App">
+
+        <nav class="navbar navbar-expand-md navbar-dark bg-info">
+            <div class="navbar-collapse collapse w-100 order-0 order-md-0 dual-collapse2">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <img src="~/Imagenes/MVAN Logistics International.png" width="100" height="50" class="rounded mx-auto d-block" />
+                    </li>
+                </ul>
+            </div>
+
+            <div class="mx-auto order-1">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">INICIO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">SERVICIOS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">MISIÓN</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">VISIÓN</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">CONTACTO</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Usuario</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Cerrar sesión</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" ng-controller="PrincipalJSController">
+            <a class="navbar-brand" href="#" >
+                <img src="~/Iconos/globe.png">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link btn btn-outline-info border border-info rounded dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            {{Prueba}}
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+
+        <div id="sidebar" class="bg-dark">
+            <div>
+                <ul class="nav flex-column mr-auto">
+                    <li class="nav-pills">
+                        <a class="nav-link" href="#">
+                            <img src="~/Iconos/icons8-pedido-50.png" width="50" height="50" class="rounded mx-auto d-block" />
+                        </a>
+                    </li>
+                    <li class="nav-pills">
+                        <a class="nav-link" href="#">
+                            <img src="~/Iconos/icons8-cliente-de-empresa-50.png" width="50" height="50" class="rounded mx-auto d-block" />
+                        </a>
+                    </li>
+                    <li class="nav-pills">
+                        <a class="nav-link" href="#">
+                            <img src="~/Iconos/icons8-aduana-50.png" width="50" height="50" class="rounded mx-auto d-block" />
+                        </a>
+                    </li>
+                    <li class="nav-pills">
+                        <a class="nav-link disabled" href="#">
+                            <img src="~/Iconos/icons8-direccion-50.png" width="50" height="50" class="rounded mx-auto d-block" />
+                        </a>
+                    </li>
+                    <li class="nav-pills">
+                        <a class="nav-link disabled" href="#">
+                            <img src="~/Iconos/icons8-servicios-64.png" width="50" height="50" class="rounded mx-auto d-block" />
+                        </a>
+                    </li>
+                    <li class="nav-pills">
+                        <a class="nav-link disabled" href="#">
+                            <img src="~/Iconos/icons8-empleados-64.png" width="50" height="50" class="rounded mx-auto d-block" />
+                        </a>
+                    </li>
+                    <li class="nav-pills">
+                        <a class="nav-link disabled" href="#">
+                            <img src="~/Iconos/icons8-servicios-80.png" width="50" height="50" class="rounded mx-auto d-block" />
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="renderSection">
+        <h1>
+            Aquí va el RenderBody
+        </h1>
+
+
+
+        @RenderBody()
+
+        <hr />
+        <footer>
+            <p> &copy; @DateTime.Now.Year - Desarrollada por Brandon Gutiérrez</p>
+        </footer>
+    </div>
+
+</body>
+
+
+</html>

@@ -6,6 +6,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Entidades.DTO;
 
 namespace DAL
 {
@@ -17,7 +18,7 @@ namespace DAL
             {
                 using (BD_LogisticaTransporteEntities BD = new BD_LogisticaTransporteEntities())
                 {
-                    List<Entidades.DTO.UsuarioDTO> oUsuarios = BD.Usuarios.Include(c => c.Nombre).Select(c => new Entidades.DTO.UsuarioDTO()
+                    List<UsuarioDTO> oUsuarios = BD.Usuarios.Include(c => c.Nombre).Select(c => new UsuarioDTO()
                     {
                         ID = c.ID_Usuario,
                         Usuario = c.Nombre,
@@ -28,10 +29,8 @@ namespace DAL
                     return oUsuarios;
                 }
             }
-            catch(Exception ex)
-            {
-               
-            }
+            catch (Exception ex)
+            { throw ex; }
         }
     }
 }

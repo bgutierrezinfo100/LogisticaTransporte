@@ -1,5 +1,5 @@
 ﻿var PrincipalJSController = function ($scope) {
-    $scope.Prueba = "Texto de prueba";
+    $scope.Prueba = "Texto";
 }
 
 PrincipalJSController.$inject = ['$scope'];
