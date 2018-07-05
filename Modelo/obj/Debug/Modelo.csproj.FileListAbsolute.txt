@@ -8,3 +8,13 @@ C:\Users\Desarrollo\Documents\Brandon\Proyecto\LogisticaTransporte\Modelo\bin\De
 C:\Users\Desarrollo\Documents\Brandon\Proyecto\LogisticaTransporte\Modelo\obj\Debug\Modelo.csprojResolveAssemblyReference.cache
 C:\Users\Desarrollo\Documents\Brandon\Proyecto\LogisticaTransporte\Modelo\obj\Debug\Modelo.dll
 C:\Users\Desarrollo\Documents\Brandon\Proyecto\LogisticaTransporte\Modelo\obj\Debug\Modelo.pdb
+C:\Users\Desarrollo\Documents\GitHub\LogisticaTransporte\Modelo\bin\Debug\Modelo.dll.config
+C:\Users\Desarrollo\Documents\GitHub\LogisticaTransporte\Modelo\bin\Debug\Modelo.dll
+C:\Users\Desarrollo\Documents\GitHub\LogisticaTransporte\Modelo\bin\Debug\Modelo.pdb
+C:\Users\Desarrollo\Documents\GitHub\LogisticaTransporte\Modelo\bin\Debug\EntityFramework.dll
+C:\Users\Desarrollo\Documents\GitHub\LogisticaTransporte\Modelo\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Desarrollo\Documents\GitHub\LogisticaTransporte\Modelo\bin\Debug\EntityFramework.xml
+C:\Users\Desarrollo\Documents\GitHub\LogisticaTransporte\Modelo\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Desarrollo\Documents\GitHub\LogisticaTransporte\Modelo\obj\Debug\Modelo.dll
+C:\Users\Desarrollo\Documents\GitHub\LogisticaTransporte\Modelo\obj\Debug\Modelo.pdb
+C:\Users\Desarrollo\Documents\GitHub\LogisticaTransporte\Modelo\obj\Debug\Modelo.csprojResolveAssemblyReference.cache

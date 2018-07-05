@@ -27,6 +27,7 @@
 
     <link href="~/Content/toastr.css" rel="stylesheet" />
 
+    <script src="~/Controllers/UsuarioJSController.js"></script>
     <script src="~/Controllers/PrincipalJSController.js"></script>
     <script src="~/App.js"></script>
 
@@ -66,14 +67,23 @@
                 </ul>
             </div>
 
-            <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+            <div class="navbar-collapse collapse w-100 order-3 dual-collapse2" ng-controller="UsuarioJSController">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="#">Usuario</a>
                     </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#"> {{usuario.nombre}}</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Cerrar sesión</a>
                     </li>
+                    @*<li class="nav-item">
+                        <input type="text" name="nombre" ng-model="usuario.nombre" /><br />
+                    </li>*@
+                    @*<li class="nav-item">
+                        <input type="text" name="correo" ng-model="usuario.contacto.correo" />
+                    </li>*@
                 </ul>
             </div>
         </nav>
@@ -155,8 +165,12 @@
         @RenderBody()
 
         <hr />
-        <footer>
+        <footer ng-app="App" ng-controller="SesionJSController" ng->
             <p> &copy; @DateTime.Now.Year - Desarrollada por Brandon Gutiérrez</p>
+
+            <p>{{fecha}}</p>
+            <p>{{hora}}</p>
+
         </footer>
     </div>
 

@@ -7,3 +7,12 @@ C:\Users\Desarrollo\Documents\Brandon\Proyecto\LogisticaTransporte\Entidades\bin
 C:\Users\Desarrollo\Documents\Brandon\Proyecto\LogisticaTransporte\Entidades\obj\Debug\Entidades.csprojResolveAssemblyReference.cache
 C:\Users\Desarrollo\Documents\Brandon\Proyecto\LogisticaTransporte\Entidades\obj\Debug\Entidades.dll
 C:\Users\Desarrollo\Documents\Brandon\Proyecto\LogisticaTransporte\Entidades\obj\Debug\Entidades.pdb
+C:\Users\Desarrollo\Documents\GitHub\LogisticaTransporte\Entidades\bin\Debug\Entidades.dll
+C:\Users\Desarrollo\Documents\GitHub\LogisticaTransporte\Entidades\bin\Debug\Entidades.pdb
+C:\Users\Desarrollo\Documents\GitHub\LogisticaTransporte\Entidades\bin\Debug\EntityFramework.dll
+C:\Users\Desarrollo\Documents\GitHub\LogisticaTransporte\Entidades\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Desarrollo\Documents\GitHub\LogisticaTransporte\Entidades\bin\Debug\EntityFramework.xml
+C:\Users\Desarrollo\Documents\GitHub\LogisticaTransporte\Entidades\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Desarrollo\Documents\GitHub\LogisticaTransporte\Entidades\obj\Debug\Entidades.dll
+C:\Users\Desarrollo\Documents\GitHub\LogisticaTransporte\Entidades\obj\Debug\Entidades.pdb
+C:\Users\Desarrollo\Documents\GitHub\LogisticaTransporte\Entidades\obj\Debug\Entidades.csprojResolveAssemblyReference.cache

@@ -5,10 +5,8 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
-
-
 #sidebar{
-    position:fixed;
+    position:relative;
     width:100px;
     height:100%;
 }
@@ -7337,6 +7335,7 @@ button.bg-dark:focus {
   left: 0;
   z-index: 1030;
 }
+
 
 .fixed-bottom {
   position: fixed;

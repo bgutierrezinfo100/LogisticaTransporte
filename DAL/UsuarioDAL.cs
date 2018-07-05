@@ -12,7 +12,7 @@ namespace DAL
 {
     public class UsuarioDAL
     {
-        public List<Entidades.DTO.UsuarioDTO> loadUsuario()
+        public List<UsuarioDTO> loadListUsuario()
         {
             try
             {
@@ -27,6 +27,26 @@ namespace DAL
                     }).ToList();
 
                     return oUsuarios;
+                }
+            }
+            catch (Exception ex)
+            { throw ex; }
+        }
+        public UsuarioDTO loadUsuario(int ID)
+        {
+            try
+            {
+                using (BD_LogisticaTransporteEntities BD = new BD_LogisticaTransporteEntities())
+                {
+                    var ModeloUsuario = BD.Usuarios.First(c => c.ID_Usuario == ID);
+
+                    UsuarioDTO oUsuario = new UsuarioDTO();
+
+                    oUsuario.Activo = bool.Parse(ModeloUsuario.Activo.ToString());
+                    oUsuario.Usuario = ModeloUsuario.Nombre;
+                    oUsuario.Password = ModeloUsuario.Nombre;
+
+                    return oUsuario;
                 }
             }
             catch (Exception ex)

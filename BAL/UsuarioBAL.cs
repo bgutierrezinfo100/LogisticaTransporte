@@ -8,12 +8,16 @@ using System.Threading.Tasks;
 
 namespace BAL
 {
-    class UsuarioBAL
+    public class UsuarioBAL
     {
+        UsuarioDAL dUsuarios = new UsuarioDAL();
         public List<UsuarioDTO> GetUsuarios()
         {
-            UsuarioDAL dUsuarios = new UsuarioDAL();
-            return dUsuarios.loadUsuario();
+            return dUsuarios.loadListUsuario();
+        }
+        public UsuarioDTO GetUsuario(int ID)
+        {
+            return dUsuarios.loadUsuario(ID);
         }
     }
 }
