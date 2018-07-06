@@ -24,7 +24,12 @@ namespace Modelo
         {
             throw new UnintentionalCodeFirstException();
         }
-    
+
+        public void Dispose()
+        {
+            throw new NotImplementedException();
+        }
+
         public virtual DbSet<Agentes_Aduanales> Agentes_Aduanales { get; set; }
         public virtual DbSet<CodigoPostal> CodigoPostal { get; set; }
         public virtual DbSet<Contribuyentes> Contribuyentes { get; set; }

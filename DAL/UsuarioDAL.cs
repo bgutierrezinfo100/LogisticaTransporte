@@ -10,29 +10,30 @@ using Entidades.DTO;
 
 namespace DAL
 {
-    public class UsuarioDAL
+    public class UsuarioDAL: BD
     {
-        public List<UsuarioDTO> loadListUsuario()
+        public UsuarioDAL(BD_LogisticaTransporteEntities _logisticaBD) : base(_logisticaBD) { }
+
+        public List<UsuarioDTO> LoadListUsuario()
         {
             try
             {
-                using (BD_LogisticaTransporteEntities BD = new BD_LogisticaTransporteEntities())
-                {
-                    List<UsuarioDTO> oUsuarios = BD.Usuarios.Include(c => c.Nombre).Select(c => new UsuarioDTO()
-                    {
-                        ID = c.ID_Usuario,
-                        Usuario = c.Nombre,
-                        Password = c.Pass,
-                        ID_Tipo = c.ID_TipoUsuario
-                    }).ToList();
 
-                    return oUsuarios;
-                }
+                List<UsuarioDTO> oUsuarios = LogisticaBD.Usuarios.Select(c => new UsuarioDTO()
+                {
+                    ID = c.ID_Usuario,
+                    Usuario = c.Nombre,
+                    Password = c.Pass,
+                    ID_Tipo = c.ID_TipoUsuario
+                }).ToList();
+
+                return oUsuarios;
+                
             }
             catch (Exception ex)
             { throw ex; }
         }
-        public UsuarioDTO loadUsuario(int ID)
+        public UsuarioDTO LoadUsuario(int ID)
         {
             try
             {

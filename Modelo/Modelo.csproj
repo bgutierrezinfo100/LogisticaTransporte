@@ -54,6 +54,7 @@
     <Compile Include="Agentes_Aduanales.cs">
       <DependentUpon>BD_LogisticaTransporte.tt</DependentUpon>
     </Compile>
+    <Compile Include="BD.cs" />
     <Compile Include="BD_LogisticaTransporte.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

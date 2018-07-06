@@ -5,19 +5,29 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Modelo;
+using DAL;
 
 namespace BAL
 {
-    public class UsuarioBAL
+    public class UsuarioBAL : WorkUnit
     {
-        UsuarioDAL dUsuarios = new UsuarioDAL();
+        private UsuarioDAL UsuDAL;
+        public UsuarioBAL(BD_LogisticaTransporteEntities _logisticaBD) : base(_logisticaBD)
+        {
+
+        }
+        public UsuarioBAL()
+        {
+
+        }
         public List<UsuarioDTO> GetUsuarios()
         {
-            return dUsuarios.loadListUsuario();
+            return UsuDAL.LoadListUsuario();
         }
         public UsuarioDTO GetUsuario(int ID)
         {
-            return dUsuarios.loadUsuario(ID);
+            return UsuDAL.LoadUsuario(ID);
         }
     }
 }
